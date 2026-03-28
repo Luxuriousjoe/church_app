@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  ios/Runner/Info.plist
+  Add these keys to your existing Info.plist
+-->
+<plist version="1.0">
+<dict>
+    <!-- App name -->
+    <key>CFBundleName</key>
+    <string>Grace Church</string>
+
+    <!-- ─── Privacy permission descriptions (required by iOS) ─────────── -->
+    <key>NSCameraUsageDescription</key>
+    <string>Grace Church needs camera access to capture photos and videos for the media ministry.</string>
+
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Grace Church needs microphone access to record sermon audio for the media ministry.</string>
+
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Grace Church needs photo library access to save and manage ministry media.</string>
+
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Grace Church needs permission to save media to your photo library.</string>
+
+    <!-- ─── Background modes for upload tasks ─────────────────────────── -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>processing</string>
+    </array>
+
+    <!-- ─── ATS — allow HTTPS to your Render backend ─────────────────── -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>your-backend.onrender.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- ─── Orientation support ───────────────────────────────────────── -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+</dict>
+</plist>
